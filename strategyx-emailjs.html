@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrategyX - Исследование эффективности удаленной работы</title>
+    <meta name="description" content="Участвуйте в исследовании эффективности удаленной работы. Помогите создать решение для мониторинга продуктивности команд.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="strategyx-emailjs.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo-container">
+                        <svg class="logo" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="15" width="60" height="70" rx="8" fill="url(#gradient)" stroke="#1a365d" stroke-width="2"/>
+                            <rect x="15" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="32" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="56" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="73" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="12" y="75" width="76" height="10" rx="5" fill="url(#gradient)"/>
+                            <ellipse cx="50" cy="30" rx="22" ry="3" fill="none" stroke="white" stroke-width="2"/>
+                            <ellipse cx="50" cy="65" rx="26" ry="4" fill="none" stroke="white" stroke-width="2"/>
+                            <path d="M40 40 L60 60 M60 40 L40 60" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#2563eb"/>
+                                    <stop offset="1" stop-color="#1d4ed8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="brand-name">StrategyX</span>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#research">Исследование</a></li>
+                    <li><a href="#concept">Концепция</a></li>
+                    <li><a href="#participate">Участие</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#participate" class="btn btn-outline">Подробнее</a>
+                    <a href="#signup" class="btn btn-primary">Участвовать</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badges">
+                        <span class="badge">📋 Исследование</span>
+                        <span class="badge">🎯 Проверка гипотезы</span>
+                        <span class="badge">🤝 Ищем респондентов</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Помогите создать <span class="highlight">решение для мониторинга</span> эффективности удаленных команд
+                    </h1>
+                    <p class="hero-subtitle">
+                        Мы исследуем проблемы продуктивности удаленной работы и разрабатываем AI-решение для их решения. Ищем руководителей и сотрудников для интервью.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">интервью для исследования</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">До 3 ноября</div>
+                            <div class="stat-label">срок проведения</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">Бесплатно</div>
+                            <div class="stat-label">участие в исследовании</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#signup" class="btn btn-primary btn-large">
+                            Принять участие
+                        </a>
+                        <a href="#concept" class="btn btn-outline btn-large">
+                            Узнать больше
+                        </a>
+                    </div>
+                    <div class="hero-note">
+                        💡 Участники исследования получат бесплатный доступ к будущему продукту
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <div class="mockup-title">StrategyX - Концепт дашборда</div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="dashboard-metrics">
+                                <div class="metric-card">
+                                    <div class="metric-value">?</div>
+                                    <div class="metric-label">Эффективность команды</div>
+                                    <div class="metric-trend neutral">Исследуем</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value">?</div>
+                                    <div class="metric-label">Продуктивное время</div>
+                                    <div class="metric-trend neutral">Анализируем</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value">?</div>
+                                    <div class="metric-label">Потребности команд</div>
+                                    <div class="metric-trend neutral">Изучаем</div>
+                                </div>
+                            </div>
+                            <div class="research-note">
+                                <p><strong>Это концепт!</strong><br>
+                                Финальный продукт будет создан на основе результатов исследования</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>Исследуем проблемы удаленной работы</h2>
+                <p>Мы изучаем, действительно ли удаленная работа влияет на продуктивность и какие инструменты могут помочь</p>
+            </div>
+            <div class="problem-stats">
+                <div class="problem-stat">
+                    <div class="stat-icon">🔍</div>
+                    <div class="stat-number">Гипотеза</div>
+                    <div class="stat-text">Компании испытывают потребность в мониторинге эффективности удаленной работы</div>
+                </div>
+                <div class="problem-stat">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number">Цель</div>
+                    <div class="stat-text">Получить подтверждение от 80% руководителей и 70% сотрудников о проблемах продуктивности</div>
+                </div>
+                <div class="problem-stat">
+                    <div class="stat-icon">💡</div>
+                    <div class="stat-number">Результат</div>
+                    <div class="stat-text">Создание AI-решения, основанного на реальных потребностях пользователей</div>
+                </div>
+            </div>
+            <div class="pain-points">
+                <div class="pain-point">
+                    <div class="pain-icon">❓</div>
+                    <h4>Что мы исследуем</h4>
+                    <p>Влияет ли удаленный формат работы на эффективность? В каких ситуациях спад эффективности наиболее заметен?</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon">🎯</div>
+                    <h4>Кого мы ищем</h4>
+                    <p>Руководителей отделов и сотрудников, работающих удаленно или в гибридном формате</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon">⏱️</div>
+                    <h4>Формат участия</h4>
+                    <p>Глубинное интервью 30-45 минут с руководителем или сотрудником удаленной команды</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>Концепция будущего продукта StrategyX</h2>
+                <p>На основе результатов исследования мы планируем создать AI-решение для мониторинга эффективности команд</p>
+            </div>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Исследование потребностей</h4>
+                        <p>Проводим интервью с руководителями и сотрудниками для понимания реальных проблем</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Анализ результатов</h4>
+                        <p>Систематизируем данные и выявляем ключевые паттерны снижения продуктивности</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Разработка MVP</h4>
+                        <p>Создаем минимально жизнеспособный продукт на основе реальных потребностей пользователей</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Тестирование с участниками</h4>
+                        <p>Участники исследования первыми получат доступ к продукту для тестирования</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participation Section -->
+    <section id="participate" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему стоит участвовать</h2>
+                <p>Ваше мнение поможет создать действительно полезный продукт для удаленных команд</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h4>Бесплатный доступ</h4>
+                    <p>Участники исследования получат бесплатный доступ к готовому продукту на 6 месяцев</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h4>Влияние на разработку</h4>
+                    <p>Ваши потребности и пожелания будут учтены при создании финального решения</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h4>Сообщество экспертов</h4>
+                    <p>Станьте частью сообщества экспертов по удаленной работе и продуктивности</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h4>Результаты исследования</h4>
+                    <p>Получите сводный отчет по исследованию с инсайтами о продуктивности удаленной работы</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h4>Удобное время</h4>
+                    <p>Интервью проводятся в удобное для вас время, формат - онлайн</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h4>Конфиденциальность</h4>
+                    <p>Все данные обрабатываются конфиденциально, в отчетах не указываются конкретные компании</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="signup" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы участвовать в исследовании?</h2>
+                <p>Заполните форму, и мы автоматически получим ваши данные на email для связи</p>
+
+                <div class="emailjs-info">
+                    <div class="info-item">
+                        <span class="info-icon">⚡</span>
+                        <span>Ответим в течение 2 часов</span>
+                    </div>
+                </div>
+
+                <div class="cta-form">
+                    <form id="research-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="text" name="name" placeholder="Ваше имя *" required>
+                            </div>
+                            <div class="form-field">
+                                <input type="email" name="email" placeholder="Рабочий email *" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="text" name="company" placeholder="Название компании *" required>
+                            </div>
+                            <div class="form-field">
+                                <input type="tel" name="phone" placeholder="Телефон (необязательно)">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <select name="position" required>
+                                    <option value="">Ваша роль *</option>
+                                    <option value="CEO/Руководитель компании">CEO/Руководитель компании</option>
+                                    <option value="Руководитель отдела">Руководитель отдела</option>
+                                    <option value="HR-менеджер">HR-менеджер</option>
+                                    <option value="Сотрудник">Сотрудник</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <select name="team_size" required>
+                                    <option value="">Размер команды *</option>
+                                    <option value="1-10 сотрудников">1-10 сотрудников</option>
+                                    <option value="11-50 сотрудников">11-50 сотрудников</option>
+                                    <option value="51-200 сотрудников">51-200 сотрудников</option>
+                                    <option value="200+ сотрудников">200+ сотрудников</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <select name="work_format" required>
+                                <option value="">Формат работы вашей команды *</option>
+                                <option value="Полностью удаленная">Полностью удаленная</option>
+                                <option value="Гибридная (офис + удаленка)">Гибридная (офис + удаленка)</option>
+                                <option value="Преимущественно офисная">Преимущественно офисная</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <textarea name="comment" rows="3" placeholder="Дополнительные комментарии или вопросы (необязательно)"></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="agree" required>
+                                <span class="checkmark"></span>
+                                Согласен на обработку персональных данных и получение информации о результатах исследования
+                            </label>
+                        </div>
+
+                        <div class="form-field">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <span class="button-text">📧 Отправить заявку</span>
+                                <span class="button-loading" style="display: none;">
+                                    <span class="spinner"></span>
+                                    Отправляем...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Альтернативный способ связи -->
+                <div class="alternative-contact">
+                    <p>Или напишите нам напрямую:</p>
+                    <div class="contact-methods">
+                        <a href="mailto:yourjoy26@gmail.com?subject=Участие%20в%20исследовании%20StrategyX" class="contact-btn">
+                            📧 yourjoy26@gmail.com
+                        </a>
+                        <a href="https://wa.me/79151332341?text=Здравствуйте!%20Хочу%20участвовать%20в%20исследовании%20StrategyX" class="contact-btn" target="_blank">
+                            💬 WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Сообщения о статусе -->
+                <div id="form-messages" class="form-messages"></div>
+
+                <div class="cta-note">
+                    🔒 Мы не передаем ваши данные третьим лицам. Данные используются только для связи по исследованию.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-container">
+                        <svg class="logo" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="15" width="60" height="70" rx="8" fill="url(#gradient)" stroke="#ffffff" stroke-width="1"/>
+                            <rect x="15" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="32" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="56" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="73" y="10" width="12" height="15" rx="2" fill="url(#gradient)"/>
+                            <rect x="12" y="75" width="76" height="10" rx="5" fill="url(#gradient)"/>
+                            <ellipse cx="50" cy="30" rx="22" ry="3" fill="none" stroke="white" stroke-width="2"/>
+                            <ellipse cx="50" cy="65" rx="26" ry="4" fill="none" stroke="white" stroke-width="2"/>
+                            <path d="M40 40 L60 60 M60 40 L40 60" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#60a5fa"/>
+                                    <stop offset="1" stop-color="#3b82f6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="brand-name">StrategyX</span>
+                    </div>
+                    <p>Исследование и разработка решений для эффективности удаленных команд</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h5>Исследование</h5>
+                        <a href="#research">О проекте</a>
+                        <a href="#concept">Концепция</a>
+                        <a href="#participate">Участие</a>
+                    </div>
+                    <div class="footer-column">
+                        <h5>Контакты</h5>
+                        <a href="mailto:yourjoy26@gmail.com">yourjoy26@gmail.com</a>
+                        <a href="tel:+7-xxx-xxx-xx-xx">+7 (xxx) xxx-xx-xx</a>
+                        <a href="#privacy">Конфиденциальность</a>
+                    </div>
+                    <div class="footer-column">
+                        <h5>Команда</h5>
+                        <a href="#team">О нас</a>
+                        <a href="#blog">Блог исследования</a>
+                        <a href="#updates">Обновления</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StrategyX. Исследовательский проект.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== НАСТРОЙКА EMAILJS =====
+        // ВАЖНО: Замените эти значения на ваши реальные
+        const EMAILJS_CONFIG = {
+            publicKey: 'oUmQE8Ali3KLnvkw0',      // Получить на emailjs.com
+            serviceId: 'service_j3hgnct',      // ID вашего email сервиса  
+            templateId: 'template_j1c9uy9'     // ID шаблона письма
+        };
+
+        // Инициализация EmailJS
+        emailjs.init(EMAILJS_CONFIG.publicKey);
+
+        // Функция для мобильного меню
+        function toggleMobileMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+
+        // Обработка основной формы
+        document.getElementById('research-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const button = form.querySelector('button[type="submit"]');
+            const buttonText = button.querySelector('.button-text');
+            const buttonLoading = button.querySelector('.button-loading');
+            const messagesDiv = document.getElementById('form-messages');
+
+            // Показываем загрузку
+            buttonText.style.display = 'none';
+            buttonLoading.style.display = 'inline-flex';
+            button.disabled = true;
+            button.classList.add('loading');
+
+            // Очищаем предыдущие сообщения
+            messagesDiv.innerHTML = '';
+
+            // Собираем данные формы
+            const formData = new FormData(form);
+            const templateParams = {};
+
+            // Конвертируем FormData в объект для EmailJS
+            for (let [key, value] of formData.entries()) {
+                templateParams[key] = value;
+            }
+
+            // Добавляем timestamp
+            templateParams.timestamp = new Date().toLocaleString('ru-RU', {
+                timeZone: 'Europe/Moscow',
+                year: 'numeric',
+                month: '2-digit', 
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            // Отправляем через EmailJS
+            emailjs.send(
+                EMAILJS_CONFIG.serviceId,
+                EMAILJS_CONFIG.templateId,
+                templateParams
+            )
+            .then(function(response) {
+                console.log('EmailJS SUCCESS!', response.status, response.text);
+
+                // Показываем успешное сообщение
+                messagesDiv.innerHTML = `
+                    <div class="success-message">
+                        <div class="message-icon">✅</div>
+                        <div class="message-content">
+                            <h4>Заявка отправлена!</h4>
+                            <p>Мы получили ваши данные и свяжемся с вами в течение 2 рабочих дней для согласования времени интервью.</p>
+                            <small>Письмо отправлено в ${new Date().toLocaleTimeString('ru-RU')}</small>
+                        </div>
+                    </div>
+                `;
+
+                // Очищаем форму
+                form.reset();
+
+                // Отправляем событие в аналитику (если подключена)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        event_category: 'engagement',
+                        event_label: 'research_participation_emailjs',
+                        value: 1
+                    });
+                }
+
+                // Прокручиваем к сообщению
+                messagesDiv.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+            }, function(error) {
+                console.error('EmailJS FAILED...', error);
+
+                // Показываем сообщение об ошибке
+                messagesDiv.innerHTML = `
+                    <div class="error-message">
+                        <div class="message-icon">❌</div>
+                        <div class="message-content">
+                            <h4>Произошла ошибка</h4>
+                            <p>Не удалось отправить заявку. Попробуйте:</p>
+                            <ul>
+                                <li>Написать на <a href="mailto:yourjoy26@gmail.com">yourjoy26@gmail.com</a></li>
+                                <li>Связаться через WhatsApp</li>
+                                <li>Повторить отправку через несколько минут</li>
+                            </ul>
+                            <small>Код ошибки: ${error.text || error.status || 'Неизвестная ошибка'}</small>
+                        </div>
+                    </div>
+                `;
+
+                messagesDiv.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+            })
+            .finally(function() {
+                // Возвращаем кнопку в исходное состояние
+                buttonText.style.display = 'inline';
+                buttonLoading.style.display = 'none';
+                button.disabled = false;
+                button.classList.remove('loading');
+            });
+        });
+
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Автоматическое изменение размера textarea
+        const textarea = document.querySelector('textarea[name="comment"]');
+        if (textarea) {
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+            });
+        }
+
+        // Валидация email в реальном времени
+        const emailInput = document.querySelector('input[name="email"]');
+        if (emailInput) {
+            emailInput.addEventListener('blur', function() {
+                const email = this.value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (email && !emailRegex.test(email)) {
+                    this.setCustomValidity('Введите корректный email адрес');
+                    this.classList.add('invalid');
+                } else {
+                    this.setCustomValidity('');
+                    this.classList.remove('invalid');
+                }
+            });
+        }
+
+        // Функция для отслеживания заполнения формы
+        const formInputs = document.querySelectorAll('#research-form input, #research-form select, #research-form textarea');
+        let filledFields = 0;
+
+        formInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                const currentFilled = Array.from(formInputs).filter(field => {
+                    if (field.type === 'checkbox') {
+                        return field.checked;
+                    }
+                    return field.value.trim() !== '';
+                }).length;
+
+                // Отправляем событие прогресса заполнения в аналитику
+                if (currentFilled > filledFields && typeof gtag !== 'undefined') {
+                    gtag('event', 'form_progress', {
+                        event_category: 'engagement',
+                        event_label: 'research_form',
+                        value: Math.round((currentFilled / formInputs.length) * 100)
+                    });
+                }
+
+                filledFields = currentFilled;
+            });
+        });
+    </script>
+</body>
+</html>
